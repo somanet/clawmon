@@ -425,7 +425,7 @@ BOOL WINAPI MfmXcvClosePort(HANDLE hXcv)
 	g_pLog->Log(LOGLEVEL_ALL, L"MfmXcvClosePort called");
 
 	//in caso di chiamata a XcvDataPort con metodo "DeletePort", si passa di qui 2 volte!
-	//la prima volta, imposto, bDeleting = TRUE, così la memoria non viene liberata
+	//la prima volta, imposto, bDeleting = TRUE, cos?la memoria non viene liberata
 	//poi, chiamo di nuovo XcvDataPort con metodo "PortDeleted", che imposta bDeleting = FALSE
 	if (pXCVDATA && !pXCVDATA->bDeleting)
 		delete pXCVDATA;

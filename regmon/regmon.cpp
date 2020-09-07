@@ -129,7 +129,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		LPVOID pMsgBuf = NULL;
 		if (FormatMessage(
 			FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS,
-			NULL, dwErr, MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), (LPTSTR)&pMsgBuf, 0, NULL))
+			NULL, dwErr, MAKELANGID(LANG_ENGLISH, SUBLANG_ENGLISH_US), (LPTSTR)&pMsgBuf, 0, NULL))
 		{
 			_tprintf(_T("The following error occurred:\n0x%08x\n%s\n"),
 				dwErr, pMsgBuf);
